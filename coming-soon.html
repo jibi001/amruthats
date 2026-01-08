@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="css/coming-soon.css"/>
+</head>
+<body>
+    
+  <div class="container">
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="A.TS Logo" />
+        </a>
+        
+    </header>
+    <h1>Coming Soon</h1>
+    <p>Buksho is launching soon. </p>
+    
+    <div id="countdown">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+
+   
+  </div>
+
+  <script>
+    // Set launch date
+const launchDate = new Date("2025-09-30T00:00:00").getTime(); // Valid date
+
+const countdown = () => {
+  const now = new Date().getTime();
+  const distance = launchDate - now;
+
+  if (isNaN(distance)) {
+    console.error("Invalid launchDate");
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+  document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+  document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+  document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+
+  if (distance < 0) {
+    clearInterval(timerInterval);
+    document.getElementById("countdown").innerHTML = "<p>We're Live!</p>";
+  }
+};
+
+const timerInterval = setInterval(countdown, 1000);
+
+
+// Email form (you can connect this to backend)
+// document.getElementById("notify-form").addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const email = this.querySelector("input").value;
+//   alert(`Thanks! We'll notify you at: ${email}`);
+//   this.reset();
+// });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,2541 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 18px;
+  font-family: 'Instrument Sans', sans-serif;
+  background-color: #ffffff; /* Fixed background color */
+  color: #333;
+  height: 100vh;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+}
+
+br{
+  margin-bottom: 20px;
+}
+.container {
+  max-width: 1300px; 
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+h1{
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 30px; /* Adjust logo size */
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.resume-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius:50px;
+  transition: all 0.3s;
+}
+
+.resume-button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/* banner section */
+
+.banner {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Each line styling for h1 */
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-family: "Instrument Serif", serif;
+  font-size: 5rem;
+  font-weight: normal;
+}
+
+/* Gradient text styling for "Amrutha.TS" */
+.gradient-text {
+  background: linear-gradient(to right, #6c63ff, #ff33cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+/* Styling for inline image spans */
+.image-span img {
+  width: 90px;
+  height: 70px;
+  border-radius:50px ;
+  object-fit: cover; 
+  margin: 0 10px;
+  vertical-align: middle;
+  padding: 2px; 
+  background: linear-gradient(90deg, #6c63ff, #ff33cc);
+
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.image-span img:hover {
+  transform: scale(1.1);
+  border-color: #ff33cc;
+}
+
+/* Text for other parts */
+.line span {
+  color: #333;
+  margin: 0 5px;
+}
+.designer{
+  font-family: "Instrument Serif", serif;
+  font-size: 5rem;
+  font-weight: normal;
+  position: relative;
+  background: url('../images/bg-gradient.svg') no-repeat center;
+  background-size: auto;
+  background-size: cover;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 1.2;
+}
+
+/* banner buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 20px; 
+}
+
+.btn {
+  text-decoration: none; 
+  padding: 15px 30px; 
+  font-size: 18px; 
+  border-radius: 30px; 
+  text-align: center; 
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.3s ease, color 0.3s ease, border 0.3s ease; 
+}
+
+/* Email Me Button */
+.email-btn {
+  background: #1A1A1A; 
+  color: white; 
+  border: none; 
+}
+
+.email-btn:hover {
+  background: linear-gradient(90deg, #6c63ff, #ff33cc); 
+  color: white;
+  transform: scale(1.05);
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+  background: transparent; 
+  color: black;
+  border: 1px solid black;
+}
+
+.linkedin-btn:hover {
+  background: linear-gradient(90deg, #ff33cc, #6c63ff);
+  color: white; 
+  transform: scale(1.05);
+  border-color: linear-gradient(90deg, #ff33cc, #6c63ff); 
+}
+
+  .tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5; 
+
+  }
+
+
+
+  /* scrolling section  */
+/* Section Styling */
+.icon-scroller-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.scroller-heading {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Scroller Styling */
+.icon-scroller {
+  width: 100%; 
+  overflow: hidden;
+  background: white; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+
+.scroller-track img {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.scroller-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  animation: scroll 50s linear infinite;
+}
+
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* Portfolio section */
+
+/* Portfolio Section Styling */
+.portfolio-section {
+  padding: 50px 20px;
+}
+
+.portfolio-heading {
+  font-size: 2.5rem;
+  font-family: "Instrument Serif", serif;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+/* Underline with Star and Gradient Lines */
+.underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.line-1 {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, #F5F8FD, #4B4B4B); 
+}
+.line-2 {
+  width: 100px;
+  height: 2px; 
+  background: linear-gradient(to left, #F5F8FD, #4B4B4B); 
+  
+}
+.star {
+  font-size: 1.5rem;
+  color: #000000; 
+}
+
+
+
+.portfolio-subheading {
+  font-size: 1.5rem;
+  font-weight: 400; 
+  color: #000000; 
+  margin-top: 4rem;
+}
+
+
+/* Grid for Mobile Apps */
+/* Grid for Mobile Apps */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 32px; 
+  margin-top: 30px;
+}
+
+/* Individual App Item */
+.app-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+
+/* Image Styling */
+.app-image {
+  position: relative;
+  width: 100%; 
+  aspect-ratio: 1;
+  border-radius: 20px; 
+  overflow: hidden; 
+  box-shadow: 0px 12px 9px -6px rgba(255, 51, 204, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.app-image:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 12px -6px rgba(255, 51, 204, 0.6);
+}
+
+.app-image img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  object-position: center;
+}
+
+.app-info {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+  padding: 0 10px; 
+}
+
+/* App Details (Left Side) */
+.app-details {
+  flex: 1; /* Take up available space */
+}
+
+.app-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #464646;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.app-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  padding: 5px 0;
+
+}
+
+/* Arrow Button (Right Side) */
+.arrow-btn {
+  font-size: 1.5rem; /* Size of the arrow */
+  color: #000000; /* Black color */
+  background: transparent; /* Transparent background */
+  border: 1px solid #000000; /* Black border */
+  border-radius: 50px; /* Rounded corners */
+  width: 58px; /* Explicit width */
+  height: 40px; /* Explicit height */
+  display: inline-block; /* Keep the element inline */
+  text-align: center; /* Center text horizontally */
+  line-height: 35px; /* Match the height for vertical centering */
+  text-decoration: none; /* Remove underline */
+  vertical-align: middle; /* Align inline elements */
+  transition: all 0.3s ease; /* Smooth hover effects */
+  cursor: pointer;
+}
+
+.arrow-btn:hover {
+  background: #000000; 
+  color: white; 
+}
+
+
+
+/* HELLO section  */
+
+/* About Me Section */
+.about-me-section {
+  padding: 60px 20px;
+  position: relative; 
+  text-align: center;
+}
+
+/* Container for Quote */
+.quote-container {
+  position: relative;
+  margin: auto;
+  color: #000000;
+  padding: 5px 20px 20px;
+  text-align: center;
+}
+
+.quote-container {
+  position: relative;
+  max-width: 950px; 
+  margin: auto; 
+  color: #000000;
+  padding: 5px 20px 20px;
+  text-align: center;
+  background-image: url('../images/hello-bg.svg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-radius: 15px; 
+}
+
+/* Quote Text */
+.quote-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #555;
+  margin: 20px 0;
+}
+
+/* Large Quotation Marks */
+.quote-icon {
+  font-size: 5rem; 
+  font-weight: bold;
+  color: black; 
+  position: absolute; 
+}
+
+.opening-quote {
+  top: -20px;
+  left: -20px; 
+}
+
+.closing-quote {
+  bottom: -40px;
+  right: -20px; 
+}
+
+
+/* Experiences Section  & Education Section */
+
+
+.experience-section {
+  padding: 50px 20px;
+  margin: auto;
+}
+
+.experience-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Experience Row */
+.experience-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Three columns: 1:2:1 ratio */
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.experience-column {
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+}
+
+/* Specific Column Styling */
+.designation {
+  font-weight: 400; 
+}
+
+.company {
+  font-weight: 500; 
+  text-align: center;
+  display: flex; /* Enable flexbox for vertical centering */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.dates {
+  text-align: right;
+  font-style: italic; 
+}
+
+
+
+
+/* Skill section styling css  */
+.skills-subheading{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 4rem;
+  text-align: left;
+}
+
+
+/* Skills Section Styling */
+.skills-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.skills-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+/* Grid for Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between cards */
+  margin: auto; /* Center grid */
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 12px 9px -6px rgba(255, 51, 204, 0.4); /* Pink bottom shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  text-align: left;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0px 15px 12px -6px rgba(255, 51, 204, 0.6); /* Enhance shadow on hover */
+}
+
+/* Skill Title */
+.skill-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffffff; /* Pink color for the heading */
+}
+
+/* Skill Description */
+.skill-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #dddddd; /* Light gray for better readability */
+}
+
+
+
+
+
+/* footer styling here  */
+/* Footer Styling */
+.footer {
+  color: #333; /* Dark gray text */
+  padding: 40px 20px;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Top Section: Links and Input */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* For responsive alignment */
+}
+
+/* Left Section */
+.footer-left {
+  flex: 1; /* Take up available space */
+}
+
+.footer-heading {
+  font-size: 6rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  width: 60%;
+  text-align: left;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.footer-link {
+  font-size: 1rem;
+  color: #aaa; /* Light gray */
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #000; /* Black on hover */
+  transform: translateX(5px); /* Move slightly to the right */
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Black underline */
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::before {
+  width: 100%; /* Expand underline on hover */
+}
+
+/* Right Section */
+.footer-right {
+  flex: 1; /* Take up available space */
+  text-align: right;
+}
+
+.contact-form {
+  display: inline-flex; /* Keep input and button inline */
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+}
+
+.contact-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  width: 250px; /* Adjust input width */
+}
+
+.contact-button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff33cc, #6c63ff);;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #ff33cc;
+  transform: scale(1.1);
+}
+
+/* Divider */
+.footer-divider {
+  height: 1px;
+  background-color: #333;
+  margin: 20px 0;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.footer-logo img {
+  width: 100px; /* Adjust logo size */
+}
+
+.footer-logo {
+  text-align: left;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: right;
+}
+
+
+
+
+
+
+/* ================================================================================== */
+/* Media queries */
+/* ================================================================================== */
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; 
+    text-align: center; 
+    padding: 15px; 
+  }
+  
+  .nav {
+    flex-direction: column; 
+    gap: 10px; 
+    margin-top: 10px; 
+  }
+  
+  .resume-button {
+    padding: 10px 20px; 
+    font-size: 16px;
+  }
+}
+
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+  .banner {
+    margin-top: 2rem;
+  }
+  
+  .line {
+    font-size: 3rem; 
+    flex-wrap: wrap;
+  }
+  .designer{
+    font-size: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .image-span img {
+    width: 70px; 
+    height: 50px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  .btn {
+    width: 50%; 
+    padding: 12px 20px;
+    font-size: 16px; 
+    margin: auto;
+  }
+  .line {
+    font-size: 2.5rem; 
+  }
+  
+  .image-span img {
+    width: 50px;
+    height: 40px;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+}
+
+
+/* Portflio section media query  */
+
+/* Responsive Portfolio Section */
+@media (max-width: 1024px) {
+  .portfolio-heading {
+    font-size: 2rem; 
+    width: 70%;
+  }
+  
+  .portfolio-subheading {
+    font-size: 1.5rem; 
+  }
+  
+  .app-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+  }
+  
+  .app-image {
+    border-radius: 15px; 
+  }
+  
+  .app-title {
+    font-size: 1rem; 
+  }
+  
+  .app-description {
+    font-size: 0.8rem; 
+  }
+  
+  .arrow-btn {
+    width: 50px;
+    height: 36px; 
+    font-size: 1.3rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-heading {
+    font-size: 1.8rem; 
+    width: 90%;
+  }
+  
+  .portfolio-subheading {
+    font-size: 1.3rem;
+  }
+  
+  .app-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  }
+  
+  .app-item {
+    text-align: center; 
+  }
+  
+  .app-title {
+    font-size: 1rem;
+  }
+  
+  .app-description {
+    font-size: 0.75rem;
+  }
+  
+  .arrow-btn {
+    width: 45px;
+    height: 32px; 
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-heading {
+    font-size: 1.5rem;
+    width: 100%; 
+  }
+  
+  .portfolio-subheading {
+    font-size: 1.2rem;
+  }
+  
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 10px; 
+  }
+  
+  .app-title {
+    font-size: 0.9rem; 
+  }
+  
+  .app-description {
+    font-size: 0.7rem;
+  }
+  
+  .app-image {
+    border-radius: 10px; 
+  }
+  
+  .arrow-btn {
+    width: 40px;
+    height: 30px; 
+    font-size: 1rem;
+  }
+}
+
+
+/* Hello section media query  */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-me-section {
+    padding: 40px 15px; /* Reduce padding for smaller screens */
+  }
+  
+  .quote-container {
+    max-width: 700px; /* Limit width for tablets */
+    padding: 20px; /* Adjust padding */
+    background-size: contain; /* Contain the background image */
+  }
+  
+  .quote-text {
+    font-size: 1rem; /* Smaller font for readability */
+    line-height: 1.6;
+  }
+  
+  .quote-icon {
+    font-size: 4rem; /* Reduce size of quotes */
+  }
+  
+  .opening-quote {
+    top: -10px;
+    left: -10px; /* Adjust positioning */
+  }
+  
+  .closing-quote {
+    bottom: -20px;
+    right: -10px; /* Adjust positioning */
+  }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-me-section {
+    padding: 30px 10px; /* Further reduce padding for mobile */
+  }
+  
+  .quote-container {
+    max-width: 90%; /* Use percentage for full-width look */
+    padding: 15px; /* Compact padding */
+    background-size: contain; /* Contain background for smaller screens */
+  }
+  
+  .quote-text {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    line-height: 1.5;
+  }
+  
+  .quote-icon {
+    font-size: 3rem; /* Smaller quotes */
+  }
+  
+  .opening-quote {
+    top: 0;
+    left: 0; /* Simplify positioning */
+  }
+  
+  .closing-quote {
+    bottom: 0;
+    right: 0; /* Simplify positioning */
+  }
+}
+
+
+/* Responsive Experience and Education section styling media query  */
+
+
+/* Responsive Styling for Tablets (max-width: 768px) */
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .experience-row {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    text-align: left; /* Left-align text for readability */
+  }
+
+  .experience-column {
+    margin-bottom: 5px; /* Add spacing between stacked columns */
+  }
+
+  .dates {
+    text-align: left; /* Align dates to the left */
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-row {
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+  }
+
+  .designation {
+    text-align: left; 
+  }
+
+  .company {
+    text-align: left; 
+    justify-content: flex-start; 
+  }
+
+  .dates {
+    text-align: left;
+    justify-content: flex-end; 
+  }
+}
+
+/* Responsive Styling for Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .experience-row {
+    grid-template-columns: 1fr; 
+    padding: 20px 0; 
+  }
+
+  .experience-column {
+    font-size: 0.9rem; 
+    text-align: left; 
+    margin-bottom: 10px;
+  }
+
+  .company {
+    margin-bottom: 5px;
+  }
+
+  .dates {
+    font-size: 0.8rem; 
+    text-align: left; 
+  }
+}
+
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    gap: 15px; /* Adjust gap */
+  }
+
+  .skill-card {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .skill-title {
+    font-size: 1.1rem; /* Adjust font size */
+  }
+
+  .skill-description {
+    font-size: 0.9rem; /* Smaller description font */
+  }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 10px; /* Compact spacing */
+  }
+
+  .skill-card {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .skill-title {
+    font-size: 1rem; /* Smaller title font */
+  }
+
+  .skill-description {
+    font-size: 0.8rem; /* Compact font for mobile */
+  }
+}
+
+
+/* Footer section media query css code  */
+
+
+/* For Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Stack links and input field vertically */
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-heading {
+    font-size: 4rem; /* Reduce font size for tablets */
+    width: 100%; /* Expand to full width */
+  }
+
+  .footer-links {
+    margin-top: 10px;
+    gap: 15px; /* Adjust spacing between links */
+    flex-wrap: wrap;
+  }
+
+  .footer-right {
+    text-align: left; /* Align input field to the left */
+    margin-top: 15px;
+    width: 100%; /* Take full width */
+  }
+
+  .contact-input {
+    width: 100%; /* Expand input to full width */
+  }
+  .contact-form{
+    margin-top: 20px;
+  }
+  .contact-button {
+    width: 25%; /* Full width for button */
+    text-align: center;
+  }
+  .footer-copyright{
+    text-align: left;
+  }
+}
+
+/* For Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 3rem; /* Reduce font size further for mobile */
+  }
+
+  .footer-links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start;
+    gap: 10px; /* Reduce gap */
+  }
+
+  .footer-right {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .contact-input {
+    width: calc(100% - 20px); /* Adjust for padding */
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .footer-logo img {
+    width: 80px; /* Adjust logo size for smaller screens */
+  }
+
+  .footer-copyright {
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+/* ==================================================== */
+/* CASE STUDY INNER PAGE STYLING */
+/* ==================================================== */
+
+.case-study-container {
+  margin: auto;
+  padding: 20px;
+  font-family: 'Instrument Sans', sans-serif;
+  margin: 6rem 0;
+}
+/* General Section Styling */
+.project-intro {
+  text-align: left;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+/* Project Title */
+.project-title {
+  font-size: 3rem;
+  max-width: 1000px;
+  color: #000000;
+  margin: 0px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+}
+
+
+.category-heading,
+.category-subheading {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.category-heading {
+  text-transform: uppercase; /* Convert text to uppercase */
+  color: #333;
+  font-weight: 500;
+}
+
+.category-subheading {
+  font-weight: normal;
+  color: #555;
+}
+
+
+/* Project Details Section */
+.project-details {
+  margin: 30px auto;
+}
+
+/* Grid Layout */
+.details-grid {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* Space between columns */
+}
+
+/* Column Styling */
+.details-column {
+  text-align: left; /* Align content to the left */
+}
+
+/* Heading Styling */
+.details-heading {
+  font-size: 0.9rem; /* Small font size */
+  font-weight: 400;
+  color: #000; /* Black color */
+  text-transform: uppercase; /* All caps */
+  margin-bottom: 5px;
+}
+
+/* Subheading Styling */
+.details-subheading {
+  font-size: 1.8rem; /* Larger font size */
+  font-weight: 500;
+  color: #333; /* Slightly lighter black */
+  margin: 0;
+}
+
+/* Design Showcase Section */
+.design-showcase {
+  background: linear-gradient(90deg, #EDD0F2, #DCE1F8); /* Gradient background */
+  border-radius: 20px; /* Rounded edges for the section */
+  padding: 50px 20px; /* Padding around the content */
+  margin: 40px 0; /* Space above and below the section */
+  text-align: center; /* Center-align content */
+}
+
+/* Wrapper for Image */
+.design-wrapper {
+  max-width: 1200px; /* Limit the image's container width */
+  margin: auto; /* Center the wrapper horizontally */
+}
+
+/* Design Image Styling */
+.design-image {
+  width: 100%; /* Make the image responsive */
+  max-width: 1000px; /* Limit the image width */
+  border-radius: 20px; /* Rounded corners for the image */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+}
+
+
+
+/* Project Description Section */
+.project-description {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 2rem;
+  color: #000; 
+  text-align: left;
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.section-content{
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+/* Grid Layout */
+.description-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Two columns: Headings and Content */
+  gap: 20px; /* Space between columns */
+  align-items: start; /* Align content at the top of each row */
+  margin-top: 4rem;
+}
+
+.grid-row {
+  display: contents; /* Make each pair of heading-content align correctly */
+}
+
+/* Headings */
+.heading-item {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase; /* All caps for headings */
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+/* Content */
+.description-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555; /* Lighter black for content */
+  margin-bottom: 20px;
+}
+
+.description-content ul {
+  list-style-type: square;
+  padding-left: 20px; /* Adjust padding for proper alignment */
+}
+
+/* Space between rows */
+.grid-row:not(:last-child) {
+  margin-bottom: 30px; /* Space between rows */
+}
+
+/* Full-Width Image */
+
+.description-image {
+  margin-top: 40px; /* Space above the image */
+}
+
+.full-width-image {
+  width: 100%; /* Ensure image spans the entire width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+
+/* Project Description Section */
+.process-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+.solution-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Instrument Sans', sans-serif;
+}
+.result-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+/* Slider Section */
+.solution-slider-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Instrument Sans', sans-serif;
+  position: relative;
+  overflow: hidden; /* Ensures cards stay within the container */
+}
+
+/* Slider Container */
+.slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.slider-btn-left {
+  left: 10px;
+}
+
+.slider-btn-right {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Slider Card */
+.slider-card {
+  flex: 0 0 calc(50% - 20px);
+  background: linear-gradient(90deg, #EBD9EE, #E8EAF5);
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 40px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.slider-card:hover {
+  transform: translateY(-10px); /* Hover effect */
+}
+
+/* Card Content */
+.card-heading {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+
+
+/* ================================================ */
+/* RESPONSIVE MEDIA QUERY FOR CASE STUDY  */
+/* ================================================ */
+
+/* Media Query for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Project Title */
+  .project-title {
+    font-size: 3rem; /* Reduce font size */
+  }
+
+  /* Details Grid */
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 4 */
+    gap: 15px; /* Reduce gap */
+  }
+
+  /* Full-Width Image */
+  .full-width-image {
+    max-width: 800px; /* Limit image width */
+  }
+
+  /* Slider Card */
+  .slider-card {
+    flex: 0 0 calc(100% - 40px); /* Show one card per view */
+    padding: 20px; /* Adjust padding */
+  }
+}
+
+/* Media Query for Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Project Title */
+  .project-title {
+    font-size: 2.5rem; /* Further reduce font size */
+  }
+
+  /* Details Grid */
+  .details-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  /* Description Grid */
+  .description-grid {
+    grid-template-columns: 1fr; /* Stack headings and content vertically */
+  }
+
+  /* Slider Buttons */
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  /* Slider Card */
+  .slider-card {
+    flex: 0 0 calc(100% - 40px); /* Single card view */
+    padding: 15px;
+  }
+
+  /* Section Headings */
+  .section-heading {
+    font-size: 1.8rem; /* Smaller font size */
+  }
+
+  /* Section Content */
+  .section-content {
+    font-size: 1rem; /* Smaller content font */
+  }
+}
+
+/* Media Query for Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Project Title */
+  .project-title {
+    font-size: 2rem; /* Compact font size */
+  }
+
+  /* Design Showcase */
+  .design-showcase {
+    padding: 20px; /* Compact padding */
+  }
+
+  .full-width-image {
+    max-width: 100%; /* Full-width for small screens */
+  }
+
+  /* Description Grid */
+  .description-grid {
+    grid-template-columns: 1fr; /* Full-width for small screens */
+  }
+
+  /* Slider Buttons */
+  .slider-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  /* Slider Card */
+  .slider-card {
+    padding: 10px;
+  }
+
+  /* Section Headings */
+  .section-heading {
+    font-size: 1.5rem; /* Compact font size */
+  }
+
+  /* Section Content */
+  .section-content {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+/* =========================== TESCO CASESTUDY ============================== */
+
+.tesco-title {
+  font-size: 3rem;
+  color: #000000;
+  margin: 0px;
+  text-align: center;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+
+}
+
+.tesco-banner{
+  text-align: center;
+}
+.tesco-wrapper{
+  max-width: 1500px;
+  margin: 3rem 0;
+}
+
+.tesco-image{
+    max-width: 1200px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    background: #EFEFEF;
+padding: 4rem;
+
+}
+
+.tesco-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-title {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Instrument Sans', sans-serif;
+  margin-bottom: 0.5rem;
+  color: #1570FF;
+}
+
+.info-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  width: 90%;
+
+}
+
+/* Responsive for small devices */
+@media (max-width: 768px) {
+  .tesco-info-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .info-column {
+    margin-bottom: 1.5rem;
+  }
+
+  .info-title {
+    font-size: 16px;
+    
+  }
+
+  .info-description {
+    font-size: 15px;
+  }
+}
+
+
+/* ========== Responsive Styles for Tesco Project Section ========== */
+
+/* Extra Small Devices (Phones - <576px) */
+@media (max-width: 575.98px) {
+  .tesco-title {
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0 1rem;
+    line-height: 1.4;
+  }
+
+  .tesco-wrapper {
+    margin: 2rem 0;
+  }
+
+  .tesco-image {
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .tesco-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .info-description {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+/* Small Devices (Tablets - ≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .tesco-title {
+    font-size: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .tesco-image {
+    max-width: 100%;
+    padding: 2rem;
+    border-radius: 18px;
+  }
+
+  .tesco-info-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Medium Devices (Small Laptops - ≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .tesco-title {
+    font-size: 2.4rem;
+  }
+
+  .tesco-image {
+    max-width: 1000px;
+    padding: 3rem;
+  }
+
+  .tesco-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Large Devices (Desktops - ≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .tesco-title {
+    font-size: 2.6rem;
+  }
+
+  .tesco-image {
+    max-width: 1100px;
+    padding: 3.5rem;
+  }
+
+  .tesco-info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra Large Devices (≥1200px) */
+@media (min-width: 1200px) {
+  .tesco-title {
+    font-size: 3rem;
+  }
+
+  .tesco-image {
+    max-width: 1200px;
+    padding: 4rem;
+  }
+
+  .tesco-info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+.tesco-objective-section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Two-column layout */
+.objective-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 180px) 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+
+.objective-title {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Using existing styles for heading and paragraph */
+.objective-description .info-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  width: 100%;
+  line-height: 1.7;
+}
+
+/* 3-column image grid */
+
+.objective-images-wrapper {
+  max-width: 960px; /* or 800px, whatever feels right for your layout */
+  margin: 0 auto;
+  padding: 0 1rem; /* small side padding for mobile */
+}
+
+.objective-images {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 4.5rem;
+  justify-content: center;
+}
+
+.objective-image {
+  max-width: 300px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .objective-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .objective-title {
+    margin-bottom: 1rem;
+  }
+
+  .objective-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.design-process-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.design-process-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.design-process-images {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.process-image {
+  margin-top: 2rem;
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .design-process-images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .design-process-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .process-image {
+    max-width: 100px;
+  }
+}
+
+
+.research-section {
+  /* padding: 4rem 1rem; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 180px) 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.research-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #222;
+  margin-top: 1rem;
+}
+
+.research-content .info-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.subheading {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Instrument Sans', sans-serif;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.research-points {
+  font-size: 16px;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+.research-points li {
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-heading {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* Container Grid reused from above */
+.research-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 180px) 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.info-title {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #1570FF;
+}
+
+/* Subheading */
+.subheading {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Instrument Sans', sans-serif;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+/* List */
+.research-points {
+  font-size: 16px;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+.research-points li {
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.insights-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+/* Grid */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card Styling */
+.insight-card {
+  background-color: #ececec;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+/* Headings inside cards */
+.insight-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Instrument Sans', sans-serif;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+/* Bullet points */
+.insight-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  font-size: 16px;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.persona-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.persona-heading {
+  margin-bottom: 2rem;
+}
+
+.persona-heading .info-title {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #1570FF;
+}
+
+/* Persona image grid */
+.persona-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.persona-image {
+  width: 100%;
+  /* max-width: 500px; */
+  height: auto;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .persona-images {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-image {
+    max-width: 100%;
+  }
+}
+
+
+
+.pov-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pov-grid {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Reuse heading style from Key Insights & Design Actions */
+.section-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #222;
+  margin-top: 1rem;
+}
+
+/* List styling */
+.pov-points {
+  font-size: 16px;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+.pov-points li {
+  margin-bottom: 1.25rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pov-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+.user-flow-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #222;
+  margin-bottom: 2.5rem;
+}
+
+.user-flow-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.user-flow-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+
+
+
+.wireframes-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #222;
+  margin-bottom: 2.5rem;
+}
+
+/* ✅ 4-column grid layout */
+.wireframes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+/* ✅ Wireframe image styling */
+.wireframe-image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 0.5rem;
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+/* ✅ Shown when scrolled into view */
+.wireframe-image.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ Responsive grid */
+@media (max-width: 1024px) {
+  .wireframes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wireframes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* ✅ Wireframe image styling */
+.screens-image {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+/* ✅ Shown when scrolled into view */
+.screens-image.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.usability-section {
+  padding: 1rem 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+/* Description block */
+.usability-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.usability-description p {
+  margin-bottom: 1.5rem;
+}
+
+
+
+.usability-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-title {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Instrument Sans', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .usability-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .usability-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Section styles */
+.testing-table-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading */
+.section-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #222;
+  margin-bottom: 2.5rem;
+}
+
+/* Scrollable container */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Table structure */
+.testing-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-width: 800px; /* Ensures table scrolls on small screens */
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+/* Table row and cell */
+.table-row {
+  display: contents;
+}
+
+.table-cell {
+  padding: 1.7rem 1rem;
+  /* border-top: 1px solid #ddd; */
+  background-color: #fff;
+}
+
+/* Striped rows */
+.table-row:nth-child(even) .table-cell {
+  background-color: #f9f9f9;
+}
+
+/* Last column: remove right border */
+.table-cell:nth-child(3n) {
+  border-right: none;
+}
+
+/* Header styling */
+.table-header .table-cell {
+  font-weight: 600;
+  border-top: none;
+}
+
+
+
+
+
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.metric-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: left;
+}
+
+.metric-title {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #1570FF;
+  margin-bottom: 0.75rem;
+}
+
+.metric-description {
+  font-size: 16px;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  min-height: 80px; /* ensures equal height for text blocks */
+}
+
+.circle-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke-width: 10;
+  cx: 50;
+  cy: 50;
+  r: 45;
+}
+
+
+
+.progress-circle .progress {
+  stroke: #4d8ef7; /* fill color */
+  stroke-dasharray: 283; /* 2πr = 2*3.14*45 */
+  stroke-dashoffset: 283;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.2s ease-out;
+}
+
+
+.progress-circle .bg {
+  fill: #92b4ec;
+  stroke: none;
+}
+
+
+.percent-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+.feedback-section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.feedback-content p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
